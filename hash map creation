@@ -1,0 +1,29 @@
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        String text="hello world programming";
+        String cleanText=text.replace(" ","").toLowerCase();
+        System.out.println("Original text: "+ text);
+        System.out.println("Clean text: " + cleanText);
+        System.out.println("==================================");
+        HashMap<Character,Integer> charFreq=new HashMap<>();
+        System.out.println("HASHMAP INSERTION METHODS:");
+        
+        System.out.println("1. Usingput() method:");
+        charFreq.put('a',5);
+        charFreq.put('b',3);
+        charFreq.put('c',1);
+        System.out.println(" After put()" +charFreq);
+        
+        System.out.println("2. using putifabsent");
+        charFreq.putIfAbsent('d',2);
+        charFreq.putIfAbsent('a',10);
+        System.out.println("After putIfAbsent():"+charFreq);
+        
+        System.out.println("3. using getordefault() for counting");
+        charFreq.put('e',charFreq.getOrDefault('e',0)+1);
+        charFreq.put('a',charFreq.getOrDefault('a',0)+1);
+        System.out.println("After getOrDefault():"+charFreq);
+        System.out.println("=======================================");
+    }
+}
